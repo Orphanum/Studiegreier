@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h3>Hva er hovedstaden i Norge?</h3>
+    <button onclick="Riktig()">Oslo</button>
+    <button onclick="Feil()">Bergen</button>
+    <button onclick="Feil()">Trondheim</button>
+
+    <p id="Feil"></p>
+    <p id="Riktig"></p>
+    
+    <script>
+        function Feil(){
+            document.getElementById("Feil").innerHTML = "Feil";
+        }
+        function Riktig(){
+            document.getElementById("Riktig").innerHTML = "Riktig";
+        }
+        
+        
+    </script>
+</body>
+</html>
