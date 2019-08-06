@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Slektstre
 {
+
     class Program
     {
         public static Person[] list = new[]
@@ -47,7 +48,7 @@ namespace Slektstre
                 if (userInput.StartsWith("VIS"))
                 {
                     var userInputID = userInput.Substring(4);
-                    List(Int32.Parse(userInputID));
+                    Person.List(int.Parse(userInputID));
                 }
             }
         }
@@ -63,54 +64,6 @@ namespace Slektstre
             Console.WriteLine(" - vis <id>: viser en bestemt person med mor, far og barn.");
         }
 
-        static void List(int args)
-        {
-            
-
-            Console.WriteLine("");
-            for (var i = 0; i < list.Length; i++)
-            {
-                if (args == list[i].ID)
-                {
-                    for (var j = 0; j < list.Length; j++)
-                    {
-                        if (j == list[i].ID)
-                        {
-                            Console.WriteLine("ID: " + list[j].ID);
-                            if (list[i].firstName == null) Console.WriteLine("Fornavn: N/A");
-                            else Console.WriteLine("Fornavn: " + list[j].firstName);
-
-                            if (list[i].lastName == null) Console.WriteLine("Etternavn: N/A");
-                            else Console.WriteLine("Etternavn: " + list[j].lastName);
-
-                            if (list[i].birthYear == 0) Console.WriteLine("Fødselsår: N/A");
-                            else Console.WriteLine("Fødselsår: " + list[j].birthYear);
-
-                            if (list[i].deathYear == 0) Console.WriteLine("Dødsår: N/A");
-                            else Console.WriteLine("Dødsår: " + list[j].deathYear);
-                        }
-                    }
-                    for (var j = 0; j < list.Length; j++)
-                    {
-                        if (j == list[i].father) Console.WriteLine("Far: " + list[j].firstName + ". ID: " + list[j].ID);
-                        if (j == list[i].mother) Console.WriteLine("Mor: " + list[j].firstName + ". ID: " + list[j].ID);
-                    }
-
-                    for (var y = 0; y < list.Length; y++)
-                    {
-                        if (args == list[y].father)
-                        {
-                            Console.WriteLine("Barn: " + list[y].firstName + ". ID: " + list[y].ID);
-
-                        }
-                        if (args == list[y].mother)
-                        {
-                            Console.WriteLine("Barn: " + list[y].firstName + ". ID: " + list[y].ID);
-                        }
-                    }
-                }
-            }
-        }
 
         static void Show()
         {
@@ -119,6 +72,7 @@ namespace Slektstre
             {
                 Console.WriteLine("");
 
+                // Writes out the basic information
                 Console.WriteLine("ID: " + list[i].ID);
                 if (list[i].firstName == null) Console.WriteLine("Fornavn: N/A");
                 else Console.WriteLine("Fornavn: " + list[i].firstName);
@@ -132,6 +86,8 @@ namespace Slektstre
                 if (list[i].deathYear == 0) Console.WriteLine("Dødsår: N/A");
                 else Console.WriteLine("Dødsår: " + list[i].deathYear);
 
+
+                // Writes out parentage
                 if (list[i].father != 0)
                 {
                     for (var j = 0; j < list.Length+1; j++)
@@ -146,15 +102,8 @@ namespace Slektstre
                         if (j == list[i].mother) Console.WriteLine("Mor: " + list[j - 1].firstName + ". ID: " + list[j -1].ID);
                     }
                 }
-
-
                 Console.WriteLine("");
-
-
             }
-
         }
     }
- 
-  
 }

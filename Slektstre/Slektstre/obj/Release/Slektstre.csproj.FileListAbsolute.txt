@@ -1,0 +1,6 @@
+C:\Users\Geir\source\repos\Slektstre\Slektstre\bin\Release\Slektstre.exe.config
+C:\Users\Geir\source\repos\Slektstre\Slektstre\bin\Release\Slektstre.exe
+C:\Users\Geir\source\repos\Slektstre\Slektstre\bin\Release\Slektstre.pdb
+C:\Users\Geir\source\repos\Slektstre\Slektstre\obj\Release\Slektstre.csproj.CoreCompileInputs.cache
+C:\Users\Geir\source\repos\Slektstre\Slektstre\obj\Release\Slektstre.exe
+C:\Users\Geir\source\repos\Slektstre\Slektstre\obj\Release\Slektstre.pdb

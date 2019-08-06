@@ -1,14 +1,6 @@
 C:\Users\Geir\source\repos\Slektstre\Slektstre\bin\Debug\Slektstre.exe.config
 C:\Users\Geir\source\repos\Slektstre\Slektstre\bin\Debug\Slektstre.exe
 C:\Users\Geir\source\repos\Slektstre\Slektstre\bin\Debug\Slektstre.pdb
-C:\Users\Geir\source\repos\Slektstre\Slektstre\obj\Debug\Slektstre.csprojAssemblyReference.cache
 C:\Users\Geir\source\repos\Slektstre\Slektstre\obj\Debug\Slektstre.csproj.CoreCompileInputs.cache
 C:\Users\Geir\source\repos\Slektstre\Slektstre\obj\Debug\Slektstre.exe
 C:\Users\Geir\source\repos\Slektstre\Slektstre\obj\Debug\Slektstre.pdb
-E:\Code\StartIT4\student\henrik\CS\Slektstre\Slektstre\bin\Debug\Slektstre.exe.config
-E:\Code\StartIT4\student\henrik\CS\Slektstre\Slektstre\bin\Debug\Slektstre.exe
-E:\Code\StartIT4\student\henrik\CS\Slektstre\Slektstre\bin\Debug\Slektstre.pdb
-E:\Code\StartIT4\student\henrik\CS\Slektstre\Slektstre\obj\Debug\Slektstre.csprojAssemblyReference.cache
-E:\Code\StartIT4\student\henrik\CS\Slektstre\Slektstre\obj\Debug\Slektstre.csproj.CoreCompileInputs.cache
-E:\Code\StartIT4\student\henrik\CS\Slektstre\Slektstre\obj\Debug\Slektstre.exe
-E:\Code\StartIT4\student\henrik\CS\Slektstre\Slektstre\obj\Debug\Slektstre.pdb
