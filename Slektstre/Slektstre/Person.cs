@@ -8,17 +8,17 @@ using Slektstre;
 
 namespace Slektstre
 {
-    class Person
+   public class Person
     {
-        public int father;
-        public int mother;
+        public Person father;
+        public Person mother;
         public string firstName;
         public string lastName;
         public int birthYear;
         public int deathYear;
         public int ID;
   
-        public Person(int Id, string FirstName = null, string LastName = null, int BirthYear = 0, int DeathYear = 0, int Father = 99, int Mother = 99)
+        public Person(int Id, string FirstName = null, string LastName = null, int BirthYear = 0, int DeathYear = 0, Person Father = null, Person Mother = null)
         {
             ID = Id;
             firstName = FirstName;
@@ -29,51 +29,33 @@ namespace Slektstre
             mother = Mother;
         }
 
-        public static void List(int args)
+        public void Show()
         {
+            Console.WriteLine("");
 
-            var list = Program.list;
+            Console.WriteLine("ID: " + ID);
+
+            if (firstName == null) Console.WriteLine("Fornavn: N/A");
+            else Console.WriteLine("Fornavn: " + firstName);
+
+            if (birthYear == 0) Console.WriteLine("Fødselsdato: N/A");
+            else Console.WriteLine("Fødselsdato: " + birthYear);
+
+            if (deathYear == 0) Console.WriteLine("Dødsår: N/A");
+            else Console.WriteLine("Dødsår: " + deathYear);
+
+            if (father == null) Console.WriteLine("Far: N/A");
+            else Console.WriteLine("Far: " + father.firstName + ", ID: " + father.ID);
+
+            if (mother == null) Console.WriteLine("Mor: N/A");
+            else Console.WriteLine("Mor: " + mother.firstName + ", ID: " + mother.ID);
 
             Console.WriteLine("");
-            for (var i = 0; i < list.Length; i++)
-            {
-                if (args == list[i].ID)
-                {
-                    for (var j = 0; j < list.Length; j++)
-                    {
-                        if (j == list[i].ID)
-                        {
-                            // Writes out the basic information
-                            Console.WriteLine("ID: " + list[j].ID);
 
-                            if (list[i].firstName == null) Console.WriteLine("Fornavn: N/A");
-                            else Console.WriteLine("Fornavn: " + list[j].firstName);
 
-                            if (list[i].lastName == null) Console.WriteLine("Etternavn: N/A");
-                            else Console.WriteLine("Etternavn: " + list[j].lastName);
 
-                            if (list[i].birthYear == 0) Console.WriteLine("Fødselsår: N/A");
-                            else Console.WriteLine("Fødselsår: " + list[j].birthYear);
 
-                            if (list[i].deathYear == 0) Console.WriteLine("Dødsår: N/A");
-                            else Console.WriteLine("Dødsår: " + list[j].deathYear);
-                        }
-                    }
-                    // Parentage
-                    for (var j = 0; j < list.Length; j++)
-                    {
-                        if (j == list[i].father) Console.WriteLine("Far: " + list[j].firstName + ". ID: " + list[j].ID);
-                        if (j == list[i].mother) Console.WriteLine("Mor: " + list[j].firstName + ". ID: " + list[j].ID);
-                    }
 
-                    // Children
-                    for (var y = 0; y < list.Length; y++)
-                    {
-                        if (args == list[y].father) Console.WriteLine("Barn: " + list[y].firstName + ". ID: " + list[y].ID);
-                        if (args == list[y].mother) Console.WriteLine("Barn: " + list[y].firstName + ". ID: " + list[y].ID);
-                    }
-                }
-            }
         }
 
     }
