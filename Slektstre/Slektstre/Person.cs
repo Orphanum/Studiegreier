@@ -31,7 +31,6 @@ namespace Slektstre
 
         public void Show()
         {
-            Console.WriteLine("");
 
             Console.WriteLine("ID: " + ID);
 

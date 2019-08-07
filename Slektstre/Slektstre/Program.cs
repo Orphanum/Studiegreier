@@ -45,8 +45,30 @@ namespace Slektstre
                     {
                         if (list[i].ID.Equals(x))
                         {
-                            list[i].Show();                                                                        
+                            list[i].Show();
+
+                            var parent = list[i];
+
+                            foreach (var p in list)
+                            {
+
+                                if (p.father != null && p.father.Equals(parent))
+                                {
+                                    Console.WriteLine("Barn:");
+                                    p.Show();
+                                }
+                                if (p.mother != null && p.mother.Equals(parent))
+                                {
+                                    Console.WriteLine("Barn");
+                                    p.Show();
+                                }
+
+                            }
+
+                           
+                            
                         }
+                         
                     }
                 }
             }
