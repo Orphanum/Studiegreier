@@ -52,23 +52,13 @@ namespace Slektstre
                             foreach (var p in list)
                             {
 
-                                if (p.father != null && p.father.Equals(parent))
+                                if (p.father == parent || p.mother == parent)
                                 {
                                     Console.WriteLine("Barn:");
                                     p.Show();
                                 }
-                                if (p.mother != null && p.mother.Equals(parent))
-                                {
-                                    Console.WriteLine("Barn");
-                                    p.Show();
-                                }
-
-                            }
-
-                           
-                            
-                        }
-                         
+                            }                                                    
+                        }                        
                     }
                 }
             }
